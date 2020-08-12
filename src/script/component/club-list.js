@@ -9,6 +9,9 @@ class clubList extends HTMLElement{
         this.render();
     }
     render(){
+        // Add this code to remove current club item
+        this.shadowDOM.innerHTML = "";
+
         this._clubs.forEach(club => {
             const clubItemElement = document.createElement("club-item");
             clubItemElement.club = club;
